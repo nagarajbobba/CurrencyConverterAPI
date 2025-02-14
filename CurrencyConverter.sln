@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter.API", "CurrencyConverter\CurrencyConverter.API.csproj", "{EF3420EA-FB7A-4F61-ACF2-5C335B530736}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter.API.Tests", "CurrencyConverter.API.Tests\CurrencyConverter.API.Tests.csproj", "{2DCA70E5-CD6D-4F65-A01A-40C0D6597D95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter.Application", "CurrencyConverter.Application\CurrencyConverter.Application.csproj", "{BCCFDA6D-323E-4566-8323-14A129D06B92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter.Application.Tests", "CurrencyConverter.Application.Tests\CurrencyConverter.Application.Tests.csproj", "{8B01251A-7E97-4C40-8353-87FD955CB3B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter.Core", "CurrencyConverter.Core\CurrencyConverter.Core.csproj", "{5035AE32-7AE5-4E60-AA16-669F5F17E75D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter.Core.Tests", "CurrencyConverter.Core.Tests\CurrencyConverter.Core.Tests.csproj", "{95D6ECA1-0B84-40E8-A319-02BD4A2B8F41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter.Infrastructure", "CurrencyConverter.Infrastructure\CurrencyConverter.Infrastructure.csproj", "{B04A21FF-2130-4F97-A50F-1C0647D406A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DB02DBE3-1398-47C6-ACF5-67C4CB56E2DB}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF3420EA-FB7A-4F61-ACF2-5C335B530736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF3420EA-FB7A-4F61-ACF2-5C335B530736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF3420EA-FB7A-4F61-ACF2-5C335B530736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF3420EA-FB7A-4F61-ACF2-5C335B530736}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DCA70E5-CD6D-4F65-A01A-40C0D6597D95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DCA70E5-CD6D-4F65-A01A-40C0D6597D95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DCA70E5-CD6D-4F65-A01A-40C0D6597D95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DCA70E5-CD6D-4F65-A01A-40C0D6597D95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCCFDA6D-323E-4566-8323-14A129D06B92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCCFDA6D-323E-4566-8323-14A129D06B92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCCFDA6D-323E-4566-8323-14A129D06B92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCCFDA6D-323E-4566-8323-14A129D06B92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B01251A-7E97-4C40-8353-87FD955CB3B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B01251A-7E97-4C40-8353-87FD955CB3B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B01251A-7E97-4C40-8353-87FD955CB3B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B01251A-7E97-4C40-8353-87FD955CB3B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5035AE32-7AE5-4E60-AA16-669F5F17E75D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5035AE32-7AE5-4E60-AA16-669F5F17E75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5035AE32-7AE5-4E60-AA16-669F5F17E75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5035AE32-7AE5-4E60-AA16-669F5F17E75D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95D6ECA1-0B84-40E8-A319-02BD4A2B8F41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D6ECA1-0B84-40E8-A319-02BD4A2B8F41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D6ECA1-0B84-40E8-A319-02BD4A2B8F41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D6ECA1-0B84-40E8-A319-02BD4A2B8F41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B04A21FF-2130-4F97-A50F-1C0647D406A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B04A21FF-2130-4F97-A50F-1C0647D406A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B04A21FF-2130-4F97-A50F-1C0647D406A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B04A21FF-2130-4F97-A50F-1C0647D406A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

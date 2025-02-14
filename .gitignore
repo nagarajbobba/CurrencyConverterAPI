@@ -1,0 +1,89 @@
+## Ignore Visual Studio temporary files, build results, and
+## other files that are not relevant to the project.
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (Mono Auto Generated)
+mono_crash.*
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Folders for Web API
+wwwroot/node_modules/
+wwwroot/lib/
+
+# Logs
+*.log
+Logs/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Dependencies
+packages/
+node_modules/
+
+# Visual Studio
+.vscode/
+.vs/
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/c_cpp_properties.json
+
+# Rider
+.idea/
+
+# NuGet
+*.nupkg
+# NuGet packages folder
+packages/*
+!packages/build/
+# Include NuGet target and props files if present
+!packages/*.targets
+!packages/*.props
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Entity Framework
+*.ndf
+*.ldf
+*.mdf
+
+# Azure Pipelines
+.terraform/
+.terraform.lock.hcl
+.terraform.tfstate
+.terraform.tfstate.backup
+plan.binary
+
+# DotNet runtime specific files
+project.nuget.cache
+*.nuget.cache
+
+# Azure Pipelines specific files
+azclioutput
+
+# Other files
+*.db
+*.bak
+*.sql
