@@ -6,7 +6,7 @@ A .NET Web API service that provides currency conversion functionality using the
 
 1. Clone the repository:
 ```sh
-git clone <repository-url>
+git clone https://github.com/nagarajbobba/CurrencyConverterAPI.git
 ```
 
 2. Prerequisites:
