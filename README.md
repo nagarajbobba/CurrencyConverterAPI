@@ -17,7 +17,6 @@ git clone https://github.com/nagarajbobba/CurrencyConverterAPI.git
 3. Configuration:
 - Update Redis connection strings in `appsettings.json` or use environment variables:
   - Redis__ConnectionString
-  - Redis__ConnectionString_RD
   - Redis__ApplicationCode
   - Redis__Environment
   - Redis__UseReadReplica
