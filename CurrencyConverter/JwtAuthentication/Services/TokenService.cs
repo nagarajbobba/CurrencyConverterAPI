@@ -1,12 +1,14 @@
 ﻿using CurrencyConverter.API.JwtAuthentication.Interfaces;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using System.Diagnostics.CodeAnalysis;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
 namespace CurrencyConverter.API.JwtAuthentication.Services
 {
+    [ExcludeFromCodeCoverage]
     public class TokenService : ITokenService
     {
         private readonly JwtSettings _jwtSettings;
@@ -15,14 +17,16 @@ namespace CurrencyConverter.API.JwtAuthentication.Services
         {
             _jwtSettings = jwtSettings.Value;
         }
-        public string GenerateAccessToken(string userId, string role)
+        public string GenerateAccessToken(string userId, List<string> roles)
         {
-            var claims = new[]
-                 {
-                    new Claim(JwtRegisteredClaimNames.Sub, userId),
-                    new Claim(ClaimTypes.Role, role),
-                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-                 };
+            var claims = new List<Claim>
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, userId),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim("ClientId", userId)
+            };
+
+            claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.SecretKey));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

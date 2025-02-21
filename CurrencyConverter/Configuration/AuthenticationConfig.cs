@@ -1,10 +1,12 @@
 ﻿using CurrencyConverter.API.JwtAuthentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace CurrencyConverter.API.Configuration
 {
+    [ExcludeFromCodeCoverage]
     public static class AuthenticationConfig
     {
         public static void AddJwtAuthentication(this IServiceCollection services, IConfiguration configuration)

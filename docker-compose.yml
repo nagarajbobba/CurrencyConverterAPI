@@ -1,0 +1,19 @@
+services:
+  currencyconverter:
+    build:
+      context: .
+      dockerfile: CurrencyConverter/Dockerfile
+    environment:
+      - Redis__ConnectionString=Redis-Cache-local:6379,abortConnect=false
+      - Redis__ConnectionString_RD=Redis-Cache-local:6379,abortConnect=false
+      - Redis__ApplicationCode=CC
+      - Redis__Environment=DEV
+      - Redis__UseReadReplica=false
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+
+  redis:
+    image: redis:latest
+    command: ["redis-server", "--bind", "redis", "--port", "6379"]
+

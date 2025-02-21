@@ -1,8 +1,9 @@
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using System.Diagnostics.CodeAnalysis;
 
 namespace CurrencyConverter.API.Configuration
 {
+    [ExcludeFromCodeCoverage]
     public static class SwaggerConfig
     {
         public static void AddSwaggerConfiguration(this IServiceCollection services)

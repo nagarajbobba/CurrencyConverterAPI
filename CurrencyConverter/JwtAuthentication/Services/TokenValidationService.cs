@@ -1,9 +1,11 @@
 ﻿using Microsoft.IdentityModel.Tokens;
+using System.Diagnostics.CodeAnalysis;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 
 namespace CurrencyConverter.API.JwtAuthentication.Services
 {
+    [ExcludeFromCodeCoverage]
     [Obsolete("This class is obsolete.", true)]
     public class TokenValidationService
     {

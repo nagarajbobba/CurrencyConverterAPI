@@ -3,7 +3,7 @@ using CurrencyConverter.Core.Entities;
 
 namespace CurrencyConverter.Application.Currency.Interfaces
 {
-    public interface ICurrencyConverterReadRepository
+    public interface ICurrencyProviderReadRepository
     {
         Task<CurrencyRates> GetLatestRatesAsync(string baseCurrency, CancellationToken cancellationToken);
         Task<CurrencyConversionResponse> ConvertAsync(CurrencyConversionRequest request, CancellationToken cancellationToken);

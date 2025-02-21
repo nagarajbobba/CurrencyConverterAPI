@@ -1,8 +1,11 @@
-﻿using Serilog;
+﻿using FluentValidation;
+using Serilog;
+using System.Diagnostics.CodeAnalysis;
 using System.Net;
 
 namespace CurrencyConverter.API.Middlewares
 {
+    [ExcludeFromCodeCoverage]
     public class ExceptionMiddleware
     {
         private readonly RequestDelegate _next;
@@ -13,13 +16,29 @@ namespace CurrencyConverter.API.Middlewares
         }
         public async Task InvokeAsync(HttpContext context)
         {
+            // TODO: 
+            //context.Request.Headers.TryGetValue("X-Correlation-Id", out var correlationId);
+            //var correlationId = context.TraceIdentifier;
             try
             {
                 await _next(context);
             }
+            catch(ValidationException ex)
+            {
+                context.Response.Headers.TryGetValue("X-Correlation-Id", out var correlationId);
+                Log.Error(ex, "Validation Failed. CorrelationId: {CorrelationId}", correlationId);
+                context.Response.ContentType = "application/json";
+                context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                await context.Response.WriteAsync(new
+                {
+                    context.Response.StatusCode,
+                    ex.Message
+                }.ToString() ?? string.Empty);
+            }
             catch (Exception ex)
             {
-                Log.Error(ex, "An unhandled exception occurred");
+                context.Response.Headers.TryGetValue("X-Correlation-Id", out var correlationId);
+                Log.Error(ex, "An unhandled exception occurred. CorrelationId: {CorrelationId}", correlationId);
                 await HandleExceptionAsync(context);
             }
         }

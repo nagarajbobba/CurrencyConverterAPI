@@ -1,11 +1,13 @@
 ﻿using CurrencyConverter.API.JwtAuthentication;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.IdentityModel.Tokens;
+using System.Diagnostics.CodeAnalysis;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 
 namespace CurrencyConverter.API.Middlewares
 {
+    [ExcludeFromCodeCoverage]
     public class JwtMiddleware
     {
         private readonly RequestDelegate _next;
