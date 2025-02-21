@@ -60,6 +60,7 @@ dotnet run --project CurrencyConverter/CurrencyConverter.API.csproj
 3. Add more comprehensive monitoring and alerting
 4. Add support for bulk currency conversions
 5. Implement user management and role-based access control
+6. Implement Health checkups
 
 ## Testing
 
