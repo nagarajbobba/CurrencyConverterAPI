@@ -4,8 +4,7 @@ services:
       context: .
       dockerfile: CurrencyConverter/Dockerfile
     environment:
-      - Redis__ConnectionString=Redis-Cache-local:6379,abortConnect=false
-      - Redis__ConnectionString_RD=Redis-Cache-local:6379,abortConnect=false
+      - Redis__ConnectionString=http://localhost:6379,abortConnect=false    
       - Redis__ApplicationCode=CC
       - Redis__Environment=DEV
       - Redis__UseReadReplica=false

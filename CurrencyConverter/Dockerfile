@@ -38,7 +38,6 @@ COPY --from=publish /app/publish .
 
 # Set environment variables for Redis configuration
 ENV Redis__ConnectionString="http://localhost:6379/, abortConnect=false"
-ENV Redis__ConnectionString_RD="http://localhost:6379/, abortConnect=false"
 ENV Redis__ApplicationCode="CC"
 ENV Redis__Environment="DEV"
 ENV Redis__UseReadReplica="false"

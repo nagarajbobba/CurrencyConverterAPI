@@ -21,7 +21,7 @@ namespace CurrencyConverter.API.Controllers.V1
             _mediator = mediator;
         }
         [HttpGet("latestrates")]
-        //[Authorize(Roles = "Admin,User,Viewer")] // (RBAC) 
+        [Authorize(Roles = "Admin,User,Viewer")] // (RBAC) 
         [SwaggerOperation(Summary = "Gets latest exchange rates", Description = "Gets latest exchange rates")]
         [SwaggerResponse(StatusCodes.Status200OK, "Request Success", typeof(CurrencyRates))]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "Rates are not available", typeof(CurrencyRates))]
