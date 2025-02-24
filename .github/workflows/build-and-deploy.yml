@@ -9,6 +9,7 @@ on:
 
 env:
   DOCKER_REGISTRY: ghcr.io
+  GITHUB_TOKEN: ${{ github.token }}
   IMAGE_NAME: ${{ github.repository_owner }}/currency-converter-api
   DOTNET_VERSION: '8.0.x'
 
@@ -37,7 +38,7 @@ jobs:
         with:
           registry: ${{ env.DOCKER_REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ env.GITHUB_TOKEN }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
