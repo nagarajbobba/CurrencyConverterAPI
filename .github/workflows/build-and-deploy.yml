@@ -9,7 +9,7 @@ on:
 
 env:
   DOCKER_REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: ${{ github.repository_owner }}/currency-converter-api
   DOTNET_VERSION: '8.0.x'
 
 jobs:
